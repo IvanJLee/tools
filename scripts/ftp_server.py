@@ -20,8 +20,8 @@ def start_server(ip, port):
 
     # Define a new user having full r/w permissions and a read-only
     # anonymous user
-    authorizer.add_user('root', 'a123456', '/Users/lijun/Projects/mt/POS-ng/ng-pos-windows', perm='elradfmwMT')
-    authorizer.add_anonymous("/Users/lijun/Projects/mt/POS-ng/ng-pos-windows/exe")
+    authorizer.add_user('root', 'a123456', '$source_path', perm='elradfmwMT')
+    authorizer.add_anonymous("$shared_path")
 
     # Instantiate FTP handler class
     handler = FTPHandler
